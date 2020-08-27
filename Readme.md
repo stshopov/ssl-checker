@@ -15,4 +15,4 @@ Python sript for chek ssl certificates validity period.
     sudo touch /var/log/ssl-checker.log && sudo chmod 777 /var/log/ssl-checker.log <br/>
 8. Add Pyton script in root crontab with correct arguments. <br/>
     sudo crontab -e <br/>
-    0 0 * * * /opt/VENVS/ssl-check/bin/python3 /usr/local/bin/ssl-checker.py --dbhost 34.102.212.233 --influx_user nginx --influx_pass <password> --influx_port 80 --influx_database nginx --crt_path /etc/nginx/cert --expiring_period 30 >> /var/log/ssl-checer.log 2>&1 <br/>
+    0 0 * * * /opt/VENVS/ssl-check/bin/python3 /usr/local/bin/ssl-checker.py --dbhost 1.2.3.4 --influx_user <user> --influx_pass <password> --influx_port 80 --influx_database <dbname> --crt_path /etc/nginx/cert --expiring_period 30 >> /var/log/ssl-checer.log 2>&1 <br/>
