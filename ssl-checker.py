@@ -19,7 +19,6 @@ def get_cert_names(path):
 def check_certs(cert_names):
 
     all_certs = {}
-
     for cert in cert_names:
         cert_name = cert.split('/')[-1]
         open_cert = open(cert, 'r')
